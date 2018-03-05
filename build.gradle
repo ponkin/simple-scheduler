@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin:'application'
+
+mainClassName = "ru.ponkin.scheduler.App"
+jar {
+    manifest {
+        attributes 'Main-Class': 'ru.ponkin.scheduler.App'
+    }
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+  compile 'joda-time:joda-time:2.9.9'
+  testCompile 'junit:junit:4.12'
+}
+
